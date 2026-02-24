@@ -1,0 +1,140 @@
+# =============================================================================
+# SiYuan Note Master CLI - Git Ignore Configuration
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# 1. Dependencies (Node.js)
+# -----------------------------------------------------------------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# -----------------------------------------------------------------------------
+# 2. Build Output
+# -----------------------------------------------------------------------------
+dist/
+build/
+*.tsbuildinfo
+*.tgz
+
+# -----------------------------------------------------------------------------
+# 3. Large Binary Files / Executables
+# -----------------------------------------------------------------------------
+# Portable executables (should be built locally or downloaded from releases)
+portable/*.exe
+portable/snmcli
+portable/snmcli-new.exe
+snmcli.exe
+
+# Skills (only exclude exe, keep documentation)
+skills/**/*.exe
+!skills/**/
+
+# -----------------------------------------------------------------------------
+# 4. IDE and Editor Configurations
+# -----------------------------------------------------------------------------
+# VS Code
+.vscode/
+*.code-workspace
+
+# IntelliJ / WebStorm
+.idea/
+*.iml
+
+# Vim / Emacs
+*.swp
+*.swo
+*~
+*.bak
+
+# -----------------------------------------------------------------------------
+# 5. Personal Configuration Files
+# -----------------------------------------------------------------------------
+# Claude AI settings (contains personal preferences)
+.claude/
+
+# Environment variables and secrets
+.env
+.env.local
+.env.*.local
+.env.development
+.env.test
+.env.production
+
+# Token and credential files (NEVER upload these!)
+*.token
+*.key
+*.pem
+*.p12
+*.pfx
+secrets.json
+credentials.json
+
+# CLI config files (may contain tokens)
+.snmclirc.json
+.snmcli.*
+
+# -----------------------------------------------------------------------------
+# 6. Logs and Temporary Files
+# -----------------------------------------------------------------------------
+logs/
+*.log
+.log/
+
+# Temporary directories
+tmp/
+temp/
+.cache/
+
+# -----------------------------------------------------------------------------
+# 7. Testing and Coverage
+# -----------------------------------------------------------------------------
+coverage/
+.nyc_output/
+*.lcov
+
+# -----------------------------------------------------------------------------
+# 8. OS Generated Files
+# -----------------------------------------------------------------------------
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+.Trash-*
+
+# -----------------------------------------------------------------------------
+# 9. Documentation Build Output (if using docs generators)
+# -----------------------------------------------------------------------------
+docs/_build/
+docs/dist/
+
+# -----------------------------------------------------------------------------
+# 10. Miscellaneous
+# -----------------------------------------------------------------------------
+# Source maps (optional, can be excluded to reduce size)
+# *.map
+
+# Debug files
+*.pid
+*.seed
+*.pid.lock
+
+# -----------------------------------------------------------------------------
+# IMPORTANT: Never upload these to public GitHub repos!
+# -----------------------------------------------------------------------------
+# - API tokens, passwords, private keys
+# - Large binary files (>50MB)
+# - Personal IDE settings
+# - Node modules (use npm install instead)

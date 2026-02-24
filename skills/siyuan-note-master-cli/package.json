@@ -1,0 +1,101 @@
+{
+  "name": "siyuan-skill",
+  "version": "1.0.1",
+  "description": "SiYuan Note (思源笔记) Skill for OpenClaw - 通过 snmcli.exe 操作思源笔记知识库（适配 SiYuan v3.5.4+）",
+  "keywords": [
+    "openclaw",
+    "skill",
+    "siyuan",
+    "思源笔记",
+    "knowledge-base",
+    "note-taking",
+    "cli"
+  ],
+  "author": "SiYuan Note Master CLI Contributors",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mixyoung/siyuan_note_master_cli.git"
+  },
+  "main": "SKILL.md",
+  "files": [
+    "SKILL.md",
+    "package.json",
+    "snmcli.exe"
+  ],
+  "openclaw": {
+    "name": "siyuan",
+    "displayName": "SiYuan Note Master",
+    "description": "通过 snmcli.exe 操作思源笔记知识库（适配 SiYuan v3.5.4+，便携版无需安装）",
+    "category": "knowledge-base",
+    "executable": {
+      "name": "snmcli.exe",
+      "description": "思源笔记命令行工具 v1.0.2",
+      "defaultArgs": "-t {token}",
+      "envVars": {
+        "SIYUAN_TOKEN": "{token}",
+        "SIYUAN_ENDPOINT": "http://127.0.0.1:6806"
+      }
+    },
+    "settings": {
+      "token": {
+        "type": "string",
+        "required": true,
+        "description": "思源笔记 API Token (设置 → 关于 → 复制 API Token)",
+        "default": "YOUR_TOKEN_HERE"
+      },
+      "endpoint": {
+        "type": "string",
+        "required": false,
+        "description": "思源笔记 API 端点",
+        "default": "http://127.0.0.1:6806"
+      }
+    },
+    "commands": [
+      "snmcli.exe -V, --version",
+      "snmcli.exe -h, --help",
+      "snmcli.exe notebook list",
+      "snmcli.exe notebook create",
+      "snmcli.exe notebook delete",
+      "snmcli.exe notebook rename",
+      "snmcli.exe notebook open",
+      "snmcli.exe notebook close",
+      "snmcli.exe notebook get",
+      "snmcli.exe doc create",
+      "snmcli.exe doc delete",
+      "snmcli.exe doc delete-id",
+      "snmcli.exe doc rename",
+      "snmcli.exe doc rename-id",
+      "snmcli.exe doc move",
+      "snmcli.exe doc move-id",
+      "snmcli.exe doc export",
+      "snmcli.exe doc export-md",
+      "snmcli.exe doc path",
+      "snmcli.exe doc get",
+      "snmcli.exe doc insert",
+      "snmcli.exe block get",
+      "snmcli.exe block update",
+      "snmcli.exe block delete",
+      "snmcli.exe block insert",
+      "snmcli.exe block prepend",
+      "snmcli.exe block append",
+      "snmcli.exe block move",
+      "snmcli.exe block children",
+      "snmcli.exe block fold",
+      "snmcli.exe block unfold",
+      "snmcli.exe block attrs",
+      "snmcli.exe block backlink",
+      "snmcli.exe query",
+      "snmcli.exe asset ls",
+      "snmcli.exe system info",
+      "snmcli.exe config get",
+      "snmcli.exe config set",
+      "snmcli.exe config init",
+      "snmcli.exe config path"
+    ]
+  },
+  "homepage": "https://github.com/mixyoung/siyuan_note_master_cli#readme",
+  "bugs": {
+    "url": "https://github.com/mixyoung/siyuan_note_master_cli/issues"
+  }
+}
